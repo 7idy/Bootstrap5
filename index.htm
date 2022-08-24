@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="images/logoBootstrap.png">
+    <link rel="stylesheet" href="bootstrap-5.0.2/css/bootstrap.min.css">
+    <script src="bootstrap-5.0.2/js/bootstrap.bundle.js"></script>
+    <title>Bootstrap 5</title>
+</head>
+<body>
+    <h1>Welcome to Bootstrap!!!</h1>
+
+    <!-- Menu ------------------------------------------------------------------------------------------------->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;">
+        Menu
+    </h3>
+
+    <div class="containerr" align="center">
+        <ul class="list-unstyled">
+            <li><a class="link-primary text-decoration-none" href="#lesson1">1. Row & Column</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson2">2. Clearfix</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson3">3. Offset</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson4">4. Push/Pull</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson5">5. Component - Button</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson6">6. Component - Cards</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson7">7. Component - Typography</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson8">8. Component - List</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson9">9. Component - Responsive Image</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson10">10. Component - Table responsive</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson11">11. Component - Carousel</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson12">12. Component - Dropdown</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson13">13. Component - Navs & Navbar</a></li>
+            <li><a class="link-primary text-decoration-none" href="#lesson14">14. Component - Icons</a></li>
+        </ul>
+    </div>
+
+    <!-- Row & Column ----------------------------------------------------------------------------------------->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson1">
+        Row & Column
+    </h3>
+
+    <div class="row">
+        <div class="col-md-12" style="background-color: red; color: white;">
+            Full width 100%
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3" style="background-color: blue; color: white;">
+            25%
+        </div>
+        <div class="col-md-3" style="background-color: yellow; color: black;">
+            25%
+        </div>
+        <div class="col-md-6" style="background-color: green; color: white;">
+            50%
+        </div>
+    </div>
+
+    <!-- Kích thước màn hình -------------------------------------------------------------------------------->
+    <div class="row">
+        <div class="col-xs-12 col-md-6" style="background-color: aqua; color: black;">
+            col-xs-12 col-md-6 <br>
+            XS - màn hình cực nhỏ như điện thoại thông minh. <br>
+            MD - màn hình có kích thước trung bình như máy tính để bàn nhỏ độ phân giải thấp và máy tính xách tay
+        </div>
+    </div>
+
+    <!-- Clearfix ------------------------------------------------------------------------------------------>
+    <!-- Khi một cột có nội dung nhiều hơn và chiều cao cao hơn những cột sau đó, bố trí này sẽ phá
+        vỡ. Các cột sẽ bị chồng chất trên dưới thay vì di chuyển đến dòng kế tiếp.  Bootstrap trợ giúp
+        thêm một div với class là clearfix. Nó sẽ buộc tất cả các cột sau khi nó di chuyển đến một dòng mới. -->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson2">
+        Clearfix
+    </h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" style="background-color: blueviolet; color: white;">
+                Một cột phải cao hơn phần còn lại <br>
+                Một cột phải cao hơn phần còn lại <br>
+                Một cột phải cao hơn phần còn lại
+            </div>
+            <div class="col-md-6" style="background-color: cadetblue; color: white;">a1</div>
+            <div class="clearfix"></div>
+            <div class="col-md-6" style="background-color: crimson; color: white;">a2</div>
+        </div>
+    </div>
+
+    <!-- Offset -------------------------------------------------------------------------------------------->
+    <!-- Theo mặc định, các cột dính vào nhau mà không để lại bất kỳ khoảng trống nào về phía bên trái. Để
+        tạo ra lề về bên trái của cột chúng ta có thể sử dụng các class offset. 
+        Áp dụng một class .col-md-Number offset-md-Number cho bất kỳ cột sẽ di chuyển nó sang bên phải. -->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson3">
+        Offset
+    </h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" style="background-color: yellow;">col-md-4</div>
+            <div class="col-md-4 offset-md-4" style="background-color: yellow;">col-md-4 offset-md-4</div>
+        </div>
+        <div class="row" style="background-color: yellow;">
+            <div class="col-md-5">col-md-5</div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-7" style="background-color: yellow;">col-md-7</div>
+            <div class="col-md-10" style="background-color: yellow;">col-md-10</div>
+            <div class="col-md-11 offset-md-1"  style="background-color: yellow;">col-md-11 offset-md-1</div>
+            <div class="col-md-11 offset-md-1"  style="background-color: yellow;">col-md-11 offset-md-1</div>
+            <div class="col-md-9 offset-md-2"  style="background-color: yellow;">col-md-9 offset-md-2</div>
+            <div class="col-md-5 offset-md-4"  style="background-color: yellow;">col-md-5 offset-md-4</div>
+        </div>
+    </div>
+
+    <!-- Push/Pull ----------------------------------------------------------------------------------------->
+    <!-- Push và pull là các class cho phép chúng ta sắp xếp các cột tùy thuộc vào kích thước màn
+        hình. Push sẽ đẩy cột về phía bên phải và Pull sẽ kéo cột về phía bên trái. Điều này khác
+        với offset là pull và push là đẩy và kéo ở cột cần sử dụng mà ko di chuyển sang cột khác.
+        Class push và pull có những định dạng sau: .col-SIZE-push-NUMBER và .col-SIZE-pull-NUMBER. Giá trị
+        size có thể sm, xs, md, l -->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson4">
+        Push/Pull
+    </h3>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-lg-push-8" style="background-color: aqua;">
+                Column 1 (col-md-4 col-lg-push-8)
+            </div>
+            <div class="col-md-8 col-lg-pull-4" style="background-color: red; color: white;">
+                Column 2 (col-md-8 col-lg-pull-4)
+            </div>
+        </div>
+    </div>
+
+    <!-- Component - Button -------------------------------------------------------------------------------->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson5">
+        Component - Button
+    </h3>
+
+    <!-- Button ---------------------------------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Button
+    </h4>
+
+    <div class="container" align="center">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+    </div>
+
+    <!-- Outline button ------------------------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Outline button 
+    </h4>
+    
+    <div class="container" align="center">
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-light">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+    </div>
+
+    <!-- Size button ---------------------------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Size button 
+    </h4>
+
+    <div class="containter" align="center">
+        <button type="button" class="btn btn-outline-primary btn-lg">Primary XL</button>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-primary btn-sm">Primary Small</button>
+    </div>
+
+    <!-- Button tags ---------------------------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Button tags 
+    </h4>
+
+    <div class="container" align="center">
+        <a href="#" class="btn btn-primary disabled" role="button">Link</a>
+        <button type="submit" class="btn btn-primary">Button</button>
+        <input type="button" value="Input" class="btn btn-primary">
+        <input type="submit" value="Submit" class="btn btn-primary">
+        <input type="reset" value="Reset" class="btn btn-primary">
+    </div>
+
+    <!-- Component - Cards --------------------------------------------------------------------------------->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;"  id="lesson6">
+        Component - Cards
+    </h3>
+    
+    <!-- Cards body ----------------------------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Card body
+    </h4>
+
+    <div class="container" align="center">
+        <div class="card" style="width: 500px;">
+            <div class="card-body">
+                This is some text within a card body.
+            </div>
+        </div>
+    </div>
+
+    <!-- Card title, Card subtitle, Card link -------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Card title, Card subtitle, Card link
+    </h4>
+
+    <div class="container" align="center">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk
+                    of the card's content.
+                </p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card image, button ------------------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Card image, button
+    </h4>
+
+    <div class="container" align="center">
+        <div class="card" style="width: 18rem;">
+            <center>
+                <img class="card-img-top" src="images/HUFILogo.png" alt="Logo HUFI" style="width: 150px;">
+            </center>
+            <div class="card-body">
+                <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk
+                    of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card header, footer ------------------------------------------------>
+    <h4 align="center" style="margin-top: 30px;">
+        Card header, footer
+    </h4>
+
+    <div class="container" align="center">
+        <div class="card" style="width: 58rem;">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+                <h5>Special title treatment</h5>
+                <p class="card-text">
+                    Some quick example text to build on the card title and make up the bulk
+                    of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">
+                2 days ago
+            </div>
+        </div>
+    </div>
+
+    <!-- Background & color for card ---------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Background & color for card
+    </h4>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card h-100 card text-white bg-primary mb-3">
+                    <img class="card-img-top" src="images/thuDaLat.jpg" alt="Thu Đà Lạt" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Thu Đà Lạt</h5>
+                        <p class="card-text" style="text-align: justify;">
+                            Đà Lạt mùa thu có gì mới không? Xin thưa rằng không!
+                            Đà Lạt mùa thu mai anh đào chưa nở, đông lạnh chưa về.
+                            Đà Lạt mùa thu vẫn chỉ có ngàn hoa khoe sắc thắm,
+                            vẫn con dốc nghiêng nghiêng và những đồi thông vi vu gió hát,
+                            không khí mang chút buồn man mác.
+                            Vậy nhưng nếu tinh tế du khách vẫn có thể nhận ra những điều vô cùng
+                            thú vị ở Đà Lạt khi thu vào độ chín muồi - tháng 10.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-white-50">Last update 7 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card text-white bg-secondary mb-3">
+                    <img class="card-img-top" src="images/tayBac.jpg" alt="Ruộng bậc thang" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Tây Bắc</h5>
+                        <p class="card-text" style="text-align: justify;">
+                            Những thửa ruộng bậc thang có ở nhiều nơi tại núi rừng Tây Bắc và cá ở Đông Bắc.
+                            Chúng được sử dụng để canh tác trên khu vực đồi núi, và cũng là biện pháp để giữ
+                            được nước cung cấp cho đồng ruộng một cách hiệu quả. Ruộng bậc thang ở Mù Cang Chải
+                            thu hút đông khách du lịch cũng như các nhiếp ảnh gia bởi vẻ đẹp không lẫn vào đâu
+                            được. Một di sản văn hóa do những người dân tộc bản địa tạo nên qua nhiều thế thệ...
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-white-50">Last update 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 card text-white bg-success mb-3">
+                    <img class="card-img-top" src="images/anhDaoDaLat.jpg" alt="Anh đào Đà Lạt" width="100%">
+                    <div class="card-body">
+                        <h5 class="card-title" style="font-weight: bold;">Anh đào Đà Lạt</h5>
+                        <p class="card-text">
+                            This is a wider card with supporting text below as a natural lead-in to additional
+                            content. This card has even longer content than the first to show that equal height
+                            action.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-white-50">Last update 3 mins ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Component - Typography ---------------------------------------------------------------------------->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson7">
+        Component - Typography
+    </h3>
+
+    <div class="container" align="center">
+        <p>Typography - Kiểu chữ</p>
+        <p>Headings</p>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <p class="h1">h1. Bootstrap heading</p>
+        <p class="h2">h2. Bootstrap heading</p>
+        <p class="h3">h3. Bootstrap heading</p>
+        <p class="h4">h4. Bootstrap heading</p>
+        <p class="h5">h5. Bootstrap heading</p>
+        <p class="h6">h6. Bootstrap heading</p>
+
+        <h1 class="display-1">Display 1</h1>
+        <h1 class="display-2">Display 2</h1>
+        <h1 class="display-3">Display 3</h1>
+        <h1 class="display-4">Display 4</h1>
+        <h1 class="display-5">Display 5</h1>
+        <h1 class="display-6">Display 6</h1>
+    </div>
+
+    <!-- Component - List ---------------------------------------------------------------------------------->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson8">
+        Component - List
+    </h3>
+
+    <div class="container" align="center">
+        <ul class="list-unstyled"> <!-- ul (unorder list) -->
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <ol class="list-inline"> <!-- ol (order list) -->
+            <li class="list-inline-item">a</li>
+            <li class="list-inline-item">b</li>
+            <li class="list-inline-item">c</li>
+        </ol>
+    </div>
+
+    <!-- Component - Responsive Image----------------------------------------------------------------------->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson9">
+        Component - Responsive Image
+    </h3>
+
+    <!-- Image Thumbnails - Hình thu nhỏ ------------------------------------>
+    <h4 align="center" style="margin-top: 30px;">
+        Image Thumbnails
+    </h4>
+
+    <div class="container" align="center">
+        <img class="img-thumbnail" src="images/tayBac.jpg" alt="Tây Bắc" style="max-width: 40%;">
+    </div>
+
+    <!-- Align image -------------------------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Align image
+    </h4>
+
+    <div class="text-center container">
+        <img class="rounded" src="images/anhDaoDaLat.jpg" style="max-width: 30%;">
+        <img class="rounded float-start" src="images/thuDaLat.jpg" style="max-width: 30%;">
+        <img class="rounded float-end" src="images/thuDaLat.jpg" style="max-width: 30%;">
+    </div>
+
+    <!-- Component - Table responsive ---------------------------------------------------------------------->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson10">
+        Component - Table responsive
+    </h3>
+
+    <div class="container" align="center">
+        <table class="table table-striped table-hover table-bordered mx-auto text-center" style="width: 50%;">
+            <thead class="table-danger">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Component - Carousel (Băng chuyền) ---------------------------------------------------------------->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson11">
+        Component - Carousel
+    </h3>
+
+    <!-- https://getbootstrap.com/docs/5.0/components/carousel/ -->
+    <div class="container" align="center">
+        <div id="carouselExampleControls" class="carousel w-50 mx-auto bg-dark" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="images/anhDaoDaLat.jpg" alt="Ảnh 1">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/tayBac.jpg" alt="Ảnh 2">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="images/thuDaLat.jpg" alt="Ảnh 3">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Component - Dropdown ------------------------------------------------------------------------------>
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson12">
+        Component - Dropdown
+    </h3>
+
+    <div class="container" align="center">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" 
+                                            aria-haspopup="true" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown Button
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Item 3</a></li>
+                <li><a class="dropdown-item" href="#">Item 4</a></li>
+                <li><a class="dropdown-item" href="#">Item 5</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown dropend mt-3">
+            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" 
+                                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                Choose a school
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">THPT. Trần Phú</a></li>
+                <li><a class="dropdown-item" href="#">THPT. Tân Bình</a></li>
+                <li><a class="dropdown-item active" href="#">THPT. Tây Thạnh</a></li>
+                <li><a class="dropdown-item" href="#">THPT. Lê Trọng Tấn</a></li>
+                <li><a class="dropdown-item disabled" href="#">THPT. Bình Hưng Hòa</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Component - Navs & Navbar ------------------------------------------------------------------------>
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson13">
+        Component - Navs & Navbar
+    </h3>
+
+    <!-- Horizontal nav ----------------------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Horizontal nav
+    </h4>
+
+    <div class="container">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#">Disabled</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Vertical nav ------------------------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Vertical nav
+    </h4>
+
+    <div class="container" align="center">
+        <nav class="nav flex-column">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#">Disabled</a>
+        </nav>
+    </div>
+
+    <!-- Nav tab ------------------------------------------------------------>
+    <h4 align="center" style="margin-top: 30px;">
+        Nav tab
+    </h4>
+
+    <div class="container" align="center">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" tabindex="-1" href="#">Disabled</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Tab with dropdown nav ---------------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Tab with dropdown nav
+    </h4>
+
+    <div class="container" align="center">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" href="#">Dropdown</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Active</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item">Something else here</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item">Separated link</a></li> <!-- Separated: Tách rời -->
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" tabindex="-1" href="#">Disabled</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Nav Pill with contain Horizontal ----------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Nav Pill with contain Horizontal
+    </h4>
+
+    <div class="container" align="center">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" role="tab" 
+                aria-controls="pills-home" aria-selected="true" href="#pills-home">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" role="tab" 
+                aria-controls="pills-profile" aria-selected="false" href="#pills-profile">Profile</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" role="tab" 
+                aria-controls="pills-contact" aria-selected="false" href="#pills-contact">Contact</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active text-center" id="pills-home" role="tabpanel" aria-labelledby="pills-hometab">
+                Home tab Horizontal<br>
+                Home tab Horizontal<br>
+                Home tab Horizontal<br>
+                Home tab Horizontal<br>
+                Home tab Horizontal<br>
+                Home tab Horizontal<br>
+                Home tab Horizontal<br>
+            </div>
+            <div class="tab-pane fade text-center" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                Profile tab Horizontal<br>
+                Profile tab Horizontal<br>
+                Profile tab Horizontal<br>
+                Profile tab Horizontal<br>
+                Profile tab Horizontal<br>
+                Profile tab Horizontal<br>
+                Profile tab Horizontal<br>
+            </div>
+            <div class="tab-pane fade text-center" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                Contact tab Horizontal<br>
+                Contact tab Horizontal<br>
+                Contact tab Horizontal<br>
+                Contact tab Horizontal<br>
+                Contact tab Horizontal<br>
+                Contact tab Horizontal<br>
+                Contact tab Horizontal<br>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nav Pill with contain Vertical ------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Nav Pill with contain Vertical
+    </h4>
+
+    <div class="container" align="center">
+        <div class="row">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" role="tab" 
+                    aria-controls="v-pills-home" aria-selected="true" href="#v-pills-home">Home</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" role="tab"
+                    aria-controls="v-pills-profile" aria-selected="false" href="#v-pills-profile">Profile</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" role="tab"
+                    aria-controls="v-pills-messages" aria-selected="false" href="#v-pills-messages">Messages</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" role="tab"
+                    aria-controls="v-pills-settings" aria-selected="false" href="#v-pills-settings">Settings</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        Tab home vertical <br>
+                        Tab home vertical <br>
+                        Tab home vertical <br>
+                        Tab home vertical <br>
+                        Tab home vertical <br>
+                        Tab home vertical <br>
+                        Tab home vertical <br>
+                    </div>
+                    <div class="tab-pane fade show" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        Tab profile vertical <br>
+                        Tab profile vertical <br>
+                        Tab profile vertical <br>
+                        Tab profile vertical <br>
+                        Tab profile vertical <br>
+                        Tab profile vertical <br>
+                        Tab profile vertical <br>
+                    </div>
+                    <div class="tab-pane fade show" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        Tab messages vertical <br>
+                        Tab messages vertical <br>
+                        Tab messages vertical <br>
+                        Tab messages vertical <br>
+                        Tab messages vertical <br>
+                        Tab messages vertical <br>
+                        Tab messages vertical <br>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings">
+                        Tab settings vertical <br>
+                        Tab settings vertical <br>
+                        Tab settings vertical <br>
+                        Tab settings vertical <br>
+                        Tab settings vertical <br>
+                        Tab settings vertical <br>
+                        Tab settings vertical <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar ------------------------------------------------------------->
+    <h4 align="center" style="margin-top: 30px;">
+        Navbar
+    </h4>
+
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/ittc.jpg" class="rounded" width="70" height="70">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- me: margin-end (= margin-right) -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="true" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                        aria-expanded="false" data-bs-toggle="dropdown" href="#">Dropdown</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"/></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <input class="form-control me-2 w-25" placeholder="Search" aria-label="Search" type="search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Component - Icons -------------------------------------------------------------------------------->
+    <h3 align="center" style="margin-top: 25px; border-top: 1px solid black;" id="lesson14">
+        Component - Icons
+    </h3>
+
+    <div class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images/ittc.jpg" class="rounded" width="70" height="70">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0"> <!-- me: margin-end (= margin-right) -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="true" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                        aria-expanded="false" data-bs-toggle="dropdown" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"/></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <input class="form-control me-2 w-25" placeholder="Search" aria-label="Search" type="search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
